@@ -1,0 +1,22 @@
+
+
+Importing file: C:\Users\Sreenivas Bandaru\IBM\ACET12\workspace\SOAP_OVERRIDE_PROVIDER\OVERRIDE_PROVIDER.wsdl
+
+The WSDL import will proceed with bindings OVERRIDE_PROVIDERSOAP.
+Creating wsdl schema document for file:///C:/Users/Sreenivas Bandaru/IBM/ACET12/workspace/SOAP_OVERRIDE_PROVIDER/OVERRIDE_PROVIDER.wsdl.
+Parsing wsdl binding {http://www.example.org/OVERRIDE_PROVIDER/}OVERRIDE_PROVIDERSOAP.
+Parsing wsdl binding input NewOperation.
+Parsing wsdl binding output NewOperation.
+Processing doc style for operation NewOperation.
+Populating WSDL schema OVERRIDE_PROVIDER.xsd.
+Creating file OVERRIDE_PROVIDER.xsd in the workspace.
+Creating file OVERRIDE_PROVIDER_InlineSchema1.xsd in the workspace.
+Copying source WSDL OVERRIDE_PROVIDER.wsdl to OVERRIDE_PROVIDER.wsdl.
+
+Elapsed time processing this message definition file: 0.308 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

@@ -1,0 +1,67 @@
+2024-09-16 23:27:41.075152: An unexpected property 'ActivityLog/consoleLog' with value 'true' was encountered when loading a YAML configuration. 
+2024-09-16 23:27:41.076632: An unexpected property 'ActivityLog/consoleLogFormat' with value 'text' was encountered when loading a YAML configuration. 
+2024-09-16 23:27:41.076792: An unexpected property 'ActivityLog/enabled' with value 'true' was encountered when loading a YAML configuration. 
+2024-09-16 23:27:41.180552: BIP1990I: Integration server 'TEST_SERVER' starting initialization; version '12.0.12.0' (64-bit) 
+2024-09-16 23:27:41.252168: BIP9905I: Initializing resource managers. 
+Listening for transport dt_socket at address: 9997
+2024-09-16 23:27:45.476052: BIP10112I: The resources from 'mqsicdc.par' have not been loaded because the runtime component 'ChangeDataCapture' has not been enabled. Reason: 'Restricted by Java Runtime selected'. Further detail: 'C:\Program Files\IBM\ACE\12.0.12.0\common\jdk\jre\embedded.java.yaml'. 
+2024-09-16 23:27:46.234536: BIP10112I: The resources from 'imbopentelemetry.lil' have not been loaded because the runtime component 'OpenTelemetry' has not been enabled. Reason: 'Integration Server Configuration'. Further detail: 'server.conf.yaml'. 
+2024-09-16 23:27:50.750288: BIP9906I: Reading deployed resources. 
+2024-09-16 23:27:52.023200: BIP2866I: IBM App Connect Enterprise administration security is inactive. 
+2024-09-16 23:27:52.099920: BIP3132I: The HTTP Listener has started listening on port '7600' for 'RestAdmin http' connections. 
+2024-09-16 23:27:52.103556: BIP1991I: Integration server has finished initialization. 
+2024-09-16 23:27:59.885344: BIP2152I: Configuration message received. 
+2024-09-16 23:27:59.986372: BIP1239E: Application 'AggregationHTTPAsync' references shared library 'AggregationHTTPAsyncLib', which is not deployed to the integration server. 
+2024-09-16 23:27:59.989072: BIP2155I: About to 'Initialize' the deployed resource 'AggregationHTTPAsync' of type 'Application'. 
+2024-09-16 23:27:59.989240: BIP9324W: The request to 'Initialize' the deployed resource 'AggregationHTTPAsync' of type 'Application' has failed. 
+2024-09-16 23:27:59.989636: BIP1096E: The source 'AggregationHTTPAsyncproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. 
+2024-09-16 23:27:59.990364: BIP2154I: Integration server finished with Configuration message. 
+2024-09-16 23:28:09.426327: BIP2152I: Configuration message received. 
+2024-09-16 23:28:09.656096: BIP2155I: About to 'Initialize' the deployed resource 'AggregationHTTPAsyncLib' of type 'SharedLibrary'. 
+2024-09-16 23:28:09.657463: BIP2155I: About to 'Initialize' the deployed resource 'AggregationHTTPAsync' of type 'Application'. 
+2024-09-16 23:28:10.657349: BIP9342I: Created compiled 'XMLNSC' schema file 'AggregationHTTPAsyncLib/$mqsiLibrary.bir'. 
+2024-09-16 23:28:14.481538: BIP9341I: Created compiled 'DFDL' schema file 'AggregationHTTPAsyncLib/$mqsiLibrary.dpif'. 
+2024-09-16 23:28:22.789548: BIP9320E: Message Flow 'AggregationHTTPAsync', 'AggregationHTTPAsync' encountered a failure and could not start. 
+2024-09-16 23:28:22.789660: BIP2685E: The node of type 'AggregateControl' named 'Aggregate Control' requires a queue manager to be specified on the integration node. 
+2024-09-16 23:28:23.287152: BIP9332I: SharedLibrary 'AggregationHTTPAsyncLib' has been created successfully. 
+2024-09-16 23:28:23.287372: BIP2155I: About to 'Start' the deployed resource 'AggregationHTTPAsync' of type 'Application'. 
+2024-09-16 23:28:23.287678: BIP9333W: Application 'AggregationHTTPAsync' has been reloaded but contains errors which has prevented some resources from starting. 
+2024-09-16 23:28:23.287792: BIP1096E: The source 'AggregationHTTPAsyncLibproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. 
+2024-09-16 23:28:23.288494: BIP2154I: Integration server finished with Configuration message. 
+2024-09-16 23:32:06.439146: BIP2152I: Configuration message received. 
+2024-09-16 23:32:06.439370: BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-16 23:32:06.441038: BIP2155I: About to 'Stop' the deployed resource 'AggregationHTTPAsync' of type 'Application'. 
+2024-09-16 23:32:06.441177: BIP2155I: About to 'TearDown' the deployed resource 'AggregationHTTPAsync' of type 'Application'. 
+2024-09-16 23:32:06.809347: BIP9521I: Application 'AggregationHTTPAsync' has been deleted. 
+2024-09-16 23:32:06.810035: BIP2155I: About to 'TearDown' the deployed resource 'AggregationHTTPAsyncLib' of type 'SharedLibrary'. 
+2024-09-16 23:32:06.918985: BIP9521I: SharedLibrary 'AggregationHTTPAsyncLib' has been deleted. 
+2024-09-16 23:32:06.935155: BIP2154I: Integration server finished with Configuration message. 
+2024-09-17 01:37:39.108816: BIP2152I: Configuration message received. 
+2024-09-17 01:37:39.227160: BIP2155I: About to 'Initialize' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-17 01:37:39.275748: BIP9320E: Message Flow 'MF_AGGRE_HTTP_ASYNC', 'MF_AGGRE_HTTP_ASYNC' encountered a failure and could not start. 
+2024-09-17 01:37:39.276300: BIP2685E: The node of type 'AggregateControl' named 'Aggregate Control' requires a queue manager to be specified on the integration node. 
+2024-09-17 01:37:39.583268: BIP2155I: About to 'Start' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-17 01:37:39.583824: BIP9333W: Application 'AGGRE_HTTP_ASYNC' has been created but contains errors which has prevented some resources from starting. 
+2024-09-17 01:37:39.584116: BIP1096E: The source 'AGGRE_HTTP_ASYNCproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. 
+2024-09-17 01:37:39.585112: BIP2154I: Integration server finished with Configuration message. 
+2024-09-17 01:37:52.649188: BIP2155I: About to 'Stop' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-17 01:37:52.649412: BIP2155I: About to 'TearDown' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-17 01:37:52.799276: BIP9521I: Application 'AGGRE_HTTP_ASYNC' has been deleted. 
+2024-09-17 01:49:05.921872: BIP2152I: Configuration message received. 
+2024-09-17 01:49:06.115744: BIP2155I: About to 'Initialize' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-17 01:49:06.163142: BIP9320E: Message Flow 'MF_AGGRE_HTTP_ASYNC', 'MF_AGGRE_HTTP_ASYNC' encountered a failure and could not start. 
+2024-09-17 01:49:06.163247: BIP2685E: The node of type 'AggregateControl' named 'Aggregate Control' requires a queue manager to be specified on the integration node. 
+2024-09-17 01:49:06.276598: BIP2155I: About to 'Start' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-17 01:49:06.277015: BIP9333W: Application 'AGGRE_HTTP_ASYNC' has been created but contains errors which has prevented some resources from starting. 
+2024-09-17 01:49:06.277169: BIP1096E: The source 'AGGRE_HTTP_ASYNCproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. 
+2024-09-17 01:49:06.277811: BIP2154I: Integration server finished with Configuration message. 
+2024-09-17 01:49:21.926258: BIP2152I: Configuration message received. 
+2024-09-17 01:49:21.926382: BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-17 01:49:21.931212: BIP2155I: About to 'Stop' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-17 01:49:21.931478: BIP2155I: About to 'TearDown' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-17 01:49:22.038420: BIP9521I: Application 'AGGRE_HTTP_ASYNC' has been deleted. 
+2024-09-17 01:49:22.041426: BIP2154I: Integration server finished with Configuration message. 
+2024-09-17 01:49:27.490400: BIP1989I: Integration server is terminating due to a shutdown event. 
+node.js process.on('exit') event emitted with exitCode of 0
+node.js process.on('exit') event emitted with exitCode of 0
+2024-09-17 01:49:37.984900: BIP1992I: Integration server 'TEST_SERVER' stopped. 

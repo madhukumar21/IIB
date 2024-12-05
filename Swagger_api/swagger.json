@@ -1,0 +1,84 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "Swagger_api",
+    "version" : "1.0.0",
+    "description" : "Swagger_api"
+  },
+  "paths" : {
+    "/get_path" : {
+      "get" : {
+        "operationId" : "getGet_path",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve get_path"
+      }
+    },
+    "/query_path" : {
+      "get" : {
+        "operationId" : "getQuery_path",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve query_path"
+      }
+    },
+    "/update_path" : {
+      "put" : {
+        "operationId" : "putUpdate_path",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful."
+          }
+        },
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "description" : "Update update_path",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "schema" : {
+            "type" : "string"
+          },
+          "description" : "The request body for the operation",
+          "required" : true
+        } ]
+      }
+    },
+    "/get_path_dyn/{ID}" : {
+      "get" : {
+        "operationId" : "getGet_path_dyn",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve get_path_dyn",
+        "parameters" : [ {
+          "required" : true,
+          "name" : "ID",
+          "in" : "path",
+          "type" : "string"
+        } ]
+      }
+    }
+  },
+  "basePath" : "/swagger_api/v1"
+}

@@ -1,0 +1,37 @@
+
+
+CREATE COMPUTE MODULE MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+		
+		DECLARE CreateTableSQL CHARACTER;
+
+        -- Construct the SQL statement to create the table
+        SET CreateTableSQL = 'CREATE TABLE YASH (
+                             ID INT PRIMARY KEY,
+                             Name VARCHAR(100) NOT NULL,
+                             Department VARCHAR(50),
+                             HireDate DATE
+                             )';
+
+        -- Execute the SQL statement using the ODBC DSN
+        					PASSTHRU(CreateTableSQL);
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

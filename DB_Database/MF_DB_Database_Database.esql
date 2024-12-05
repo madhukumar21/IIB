@@ -1,0 +1,19 @@
+
+
+CREATE DATABASE MODULE MF_DB_Database_Database
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL proc();
+		RETURN TRUE;
+	END;
+	
+		CREATE PROCEDURE proc ( )
+		BEGIN
+			DECLARE sqlc CHARACTER;
+			
+			SET sqlc ='INSERT INTO EMPLOYE79 VALUES(''3'',''ayiti'',''IIB'',''HYD'')';
+			PASSTHRU(sqlc);
+			
+		END;
+		
+END MODULE;

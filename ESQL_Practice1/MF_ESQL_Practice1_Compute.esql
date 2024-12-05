@@ -1,0 +1,13 @@
+
+
+CREATE COMPUTE MODULE MF_ESQL_Practice1_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		set OutputRoot.XMLNSC.statusCode = InputRoot.JSON.Data.statusCode;
+		SET OutputRoot.XMLNSC.message = InputRoot.JSON.Data.message;
+		RETURN TRUE;
+	END;
+
+	
+END MODULE;

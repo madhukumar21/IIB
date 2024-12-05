@@ -1,0 +1,31 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "Swagger",
+    "version" : "1.0.0",
+    "description" : "Swagger"
+  },
+  "paths" : {
+    "/swag" : {
+      "get" : {
+        "operationId" : "getSwag",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve swag",
+        "parameters" : [ {
+          "name" : "param1",
+          "in" : "query",
+          "type" : "string"
+        } ]
+      }
+    }
+  },
+  "basePath" : "/swagger/v1"
+}

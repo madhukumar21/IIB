@@ -1,0 +1,30 @@
+
+
+CREATE COMPUTE MODULE MF_array_Compute
+    CREATE FUNCTION Main() RETURNS BOOLEAN
+    BEGIN
+        -- Initialize output JSON array
+        SET OutputRoot.JSON.Data.students = NULL;
+
+        -- Get the number of Student records in the XML input
+        DECLARE studentCount INTEGER CARDINALITY(InputRoot.XMLNSC.Students.Student[]);
+
+        -- Loop through each Student record in the XML input
+        DECLARE i INTEGER 1;
+        WHILE i <= studentCount DO
+            -- Extract id and name from the XML
+            DECLARE studentId INTEGER InputRoot.XMLNSC.Students.Student[i].id;
+            DECLARE studentName CHAR InputRoot.XMLNSC.Students.Student[i].name;
+
+            -- Construct corresponding JSON array element
+            SET OutputRoot.JSON.Data.students[i].id = studentId;
+            SET OutputRoot.JSON.Data.students[i].name = studentName;
+
+            -- Increment loop counter
+            SET i = i + 1;
+        END WHILE;
+
+        -- Propagate the message to the next node
+        RETURN TRUE;
+    END;
+END MODULE;

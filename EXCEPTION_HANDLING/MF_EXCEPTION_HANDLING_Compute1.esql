@@ -1,0 +1,39 @@
+
+
+CREATE COMPUTE MODULE MF_EXCEPTION_HANDLING_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	
+		 CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+	
+		DECLARE MSG_ID CHARACTER InputLocalEnvironment.Destination.HTTP.RequestIdentifier;
+		DECLARE exce REFERENCE TO InputExceptionList.*[1];
+		DECLARE File,Line,Type,Label,Text CHARACTER;
+		DECLARE Number INTEGER;
+		while LASTMOVE(exce) Do
+			MOVE exce LASTCHILD;
+			if exce.Number is not null then
+				set File=exce.File;
+				set Line=exce.Line;
+				set Type=exce.Type;
+				set Label=exce.Label;
+				set Number=exce.Number;
+				set Text=exce.Text;
+			end if;
+		end while;
+		
+		SET OutputRoot.XMLNSC.ExceptionList.Line=Line;
+		SET OutputRoot.XMLNSC.ExceptionList.Number=Number;
+		SET OutputRoot.XMLNSC.ExceptionList.Text=Text;
+		
+		CALL EXCEPTT (ApplicationLabel,MessageFlowLabel,NodeLabel,MSG_ID,Line,CAST(Number AS CHARACTER),Text,CURRENT_TIMESTAMP);		
+	END;
+END MODULE;
+CREATE PROCEDURE EXCEPTT(IN PARAM1 CHARACTER,IN PARAM2 CHARACTER, IN PARAM3 CHARACTER, IN PARAM4 CHARACTER, IN PARAM5 CHARACTER, IN PARAM6 CHARACTER, IN PARAM7 CHARACTER, IN PARAM8 TIMESTAMP) 
+LANGUAGE DATABASE
+EXTERNAL NAME "M_EXCEPTION_TABLE";

@@ -1,0 +1,18 @@
+
+
+CREATE FILTER MODULE MF_Label_override_Filter
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		--IF InputRoot.XMLNSC = 'madhu' THEN
+        -- Set the target label to 'label1'
+        --SET OutputLocalEnvironment.Destination.LabelName = 'label1';
+       -- SET OutputLocalEnvironment.Destination.RouterList.DestinationData.labelName='label1
+        
+        -- Propagate to the defined label
+        --PROPAGATE TO LABEL 'label1';
+   -- END IF;
+		
+		RETURN TRUE;
+	END;
+
+END MODULE;

@@ -1,0 +1,61 @@
+2024-09-16 17:57:41.180552Z: [Thread 12932] (Msg 1/1) BIP1990I: Integration server 'TEST_SERVER' starting initialization; version '12.0.12.0' (64-bit) 
+2024-09-16 17:57:41.252168Z: [Thread 12932] (Msg 1/1) BIP9905I: Initializing resource managers. 
+2024-09-16 17:57:45.476052Z: [Thread 12932] (Msg 1/1) BIP10112I: The resources from 'mqsicdc.par' have not been loaded because the runtime component 'ChangeDataCapture' has not been enabled. Reason: 'Restricted by Java Runtime selected'. Further detail: 'C:\Program Files\IBM\ACE\12.0.12.0\common\jdk\jre\embedded.java.yaml'. 
+2024-09-16 17:57:46.234536Z: [Thread 12932] (Msg 1/1) BIP10112I: The resources from 'imbopentelemetry.lil' have not been loaded because the runtime component 'OpenTelemetry' has not been enabled. Reason: 'Integration Server Configuration'. Further detail: 'server.conf.yaml'. 
+2024-09-16 17:57:50.750288Z: [Thread 12932] (Msg 1/1) BIP9906I: Reading deployed resources. 
+2024-09-16 17:57:52.023200Z: [Thread 11872] (Msg 1/1) BIP2866I: IBM App Connect Enterprise administration security is inactive. 
+2024-09-16 17:57:52.099920Z: [Thread 11872] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7600' for 'RestAdmin http' connections. 
+2024-09-16 17:57:52.103556Z: [Thread 12932] (Msg 1/1) BIP1991I: Integration server has finished initialization. 
+2024-09-16 17:57:59.885344Z: [Thread 11376] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-16 17:57:59.986372Z: [Thread 11376] (Msg 1/1) BIP1239E: Application 'AggregationHTTPAsync' references shared library 'AggregationHTTPAsyncLib', which is not deployed to the integration server. 
+2024-09-16 17:57:59.989072Z: [Thread 11376] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'AggregationHTTPAsync' of type 'Application'. 
+2024-09-16 17:57:59.989240Z: [Thread 11376] (Msg 1/1) BIP9324W: The request to 'Initialize' the deployed resource 'AggregationHTTPAsync' of type 'Application' has failed. 
+2024-09-16 17:57:59.989636Z: [Thread 11376] (Msg 1/1) BIP1096E: The source 'AggregationHTTPAsyncproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. 
+2024-09-16 17:57:59.990364Z: [Thread 11376] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-16 17:58:09.426327Z: [Thread 11376] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-16 17:58:09.656096Z: [Thread 11376] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'AggregationHTTPAsyncLib' of type 'SharedLibrary'. 
+2024-09-16 17:58:09.657463Z: [Thread 11376] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'AggregationHTTPAsync' of type 'Application'. 
+2024-09-16 17:58:10.657349Z: [Thread 11376] (Msg 1/1) BIP9342I: Created compiled 'XMLNSC' schema file 'AggregationHTTPAsyncLib/$mqsiLibrary.bir'. 
+2024-09-16 17:58:14.481538Z: [Thread 11376] (Msg 1/1) BIP9341I: Created compiled 'DFDL' schema file 'AggregationHTTPAsyncLib/$mqsiLibrary.dpif'. 
+2024-09-16 17:58:22.789548Z: [Thread 11376] (Msg 1/2) BIP9320E: Message Flow 'AggregationHTTPAsync', 'AggregationHTTPAsync' encountered a failure and could not start. 
+2024-09-16 17:58:22.789660Z: [Thread 11376] (Msg 2/2) BIP2685E: The node of type 'AggregateControl' named 'Aggregate Control' requires a queue manager to be specified on the integration node. 
+2024-09-16 17:58:23.287152Z: [Thread 11376] (Msg 1/1) BIP9332I: SharedLibrary 'AggregationHTTPAsyncLib' has been created successfully. 
+2024-09-16 17:58:23.287372Z: [Thread 11376] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'AggregationHTTPAsync' of type 'Application'. 
+2024-09-16 17:58:23.287678Z: [Thread 11376] (Msg 1/1) BIP9333W: Application 'AggregationHTTPAsync' has been reloaded but contains errors which has prevented some resources from starting. 
+2024-09-16 17:58:23.287792Z: [Thread 11376] (Msg 1/1) BIP1096E: The source 'AggregationHTTPAsyncLibproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. 
+2024-09-16 17:58:23.288494Z: [Thread 11376] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-16 18:02:06.439146Z: [Thread 10560] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-16 18:02:06.439370Z: [Thread 10560] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-16 18:02:06.441038Z: [Thread 10560] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'AggregationHTTPAsync' of type 'Application'. 
+2024-09-16 18:02:06.441177Z: [Thread 10560] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'AggregationHTTPAsync' of type 'Application'. 
+2024-09-16 18:02:06.809347Z: [Thread 10560] (Msg 1/1) BIP9521I: Application 'AggregationHTTPAsync' has been deleted. 
+2024-09-16 18:02:06.810035Z: [Thread 10560] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'AggregationHTTPAsyncLib' of type 'SharedLibrary'. 
+2024-09-16 18:02:06.918985Z: [Thread 10560] (Msg 1/1) BIP9521I: SharedLibrary 'AggregationHTTPAsyncLib' has been deleted. 
+2024-09-16 18:02:06.935155Z: [Thread 10560] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-16 20:07:39.108816Z: [Thread 11488] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-16 20:07:39.227160Z: [Thread 11488] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-16 20:07:39.275748Z: [Thread 11488] (Msg 1/2) BIP9320E: Message Flow 'MF_AGGRE_HTTP_ASYNC', 'MF_AGGRE_HTTP_ASYNC' encountered a failure and could not start. 
+2024-09-16 20:07:39.276300Z: [Thread 11488] (Msg 2/2) BIP2685E: The node of type 'AggregateControl' named 'Aggregate Control' requires a queue manager to be specified on the integration node. 
+2024-09-16 20:07:39.583268Z: [Thread 11488] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-16 20:07:39.583824Z: [Thread 11488] (Msg 1/1) BIP9333W: Application 'AGGRE_HTTP_ASYNC' has been created but contains errors which has prevented some resources from starting. 
+2024-09-16 20:07:39.584116Z: [Thread 11488] (Msg 1/1) BIP1096E: The source 'AGGRE_HTTP_ASYNCproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. 
+2024-09-16 20:07:39.585112Z: [Thread 11488] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-16 20:07:52.649188Z: [Thread 12916] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-16 20:07:52.649412Z: [Thread 12916] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-16 20:07:52.799276Z: [Thread 12916] (Msg 1/1) BIP9521I: Application 'AGGRE_HTTP_ASYNC' has been deleted. 
+2024-09-16 20:19:05.921872Z: [Thread 13232] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-16 20:19:06.115744Z: [Thread 13232] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-16 20:19:06.163142Z: [Thread 13232] (Msg 1/2) BIP9320E: Message Flow 'MF_AGGRE_HTTP_ASYNC', 'MF_AGGRE_HTTP_ASYNC' encountered a failure and could not start. 
+2024-09-16 20:19:06.163247Z: [Thread 13232] (Msg 2/2) BIP2685E: The node of type 'AggregateControl' named 'Aggregate Control' requires a queue manager to be specified on the integration node. 
+2024-09-16 20:19:06.276598Z: [Thread 13232] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-16 20:19:06.277015Z: [Thread 13232] (Msg 1/1) BIP9333W: Application 'AGGRE_HTTP_ASYNC' has been created but contains errors which has prevented some resources from starting. 
+2024-09-16 20:19:06.277169Z: [Thread 13232] (Msg 1/1) BIP1096E: The source 'AGGRE_HTTP_ASYNCproject.generated.bar' has been deployed but there were one or more failures which may mean the deployed resources will be unable to execute. 
+2024-09-16 20:19:06.277811Z: [Thread 13232] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-16 20:19:21.926258Z: [Thread 12888] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-16 20:19:21.926382Z: [Thread 12888] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-16 20:19:21.931212Z: [Thread 12888] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-16 20:19:21.931478Z: [Thread 12888] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'AGGRE_HTTP_ASYNC' of type 'Application'. 
+2024-09-16 20:19:22.038420Z: [Thread 12888] (Msg 1/1) BIP9521I: Application 'AGGRE_HTTP_ASYNC' has been deleted. 
+2024-09-16 20:19:22.041426Z: [Thread 12888] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-16 20:19:27.490400Z: [Thread 12932] (Msg 1/1) BIP1989I: Integration server is terminating due to a shutdown event. 
+2024-09-16 20:19:37.984900Z: [Thread 12932] (Msg 1/1) BIP1992I: Integration server 'TEST_SERVER' stopped. 

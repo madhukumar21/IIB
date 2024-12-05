@@ -1,0 +1,17 @@
+
+CREATE COMPUTE MODULE MF_AGGRE_HTTP_ASYNC_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		 --CALL CopyMessageHeaders();
+		-- CALL CopyEntireMessage();
+		 DECLARE ref REFERENCE TO InputRoot.XMLNSC.Customer.AadharNumber;
+		IF ref= 51 THEN
+			SET OutputRoot.XMLNSC.CustomerDetails.AadharNumber= ref;
+			--SET OutputRoot.XMLNSC.Details.Number= ref;
+		--ELSE
+		END IF;
+		RETURN TRUE;
+	END;
+
+	
+END MODULE;

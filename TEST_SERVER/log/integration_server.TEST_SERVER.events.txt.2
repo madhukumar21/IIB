@@ -1,0 +1,147 @@
+2024-09-06 16:55:51.244468Z: [Thread 10504] (Msg 1/1) BIP1990I: Integration server 'TEST_SERVER' starting initialization; version '12.0.12.0' (64-bit) 
+2024-09-06 16:55:51.351396Z: [Thread 10504] (Msg 1/1) BIP9905I: Initializing resource managers. 
+2024-09-06 16:55:56.483984Z: [Thread 10504] (Msg 1/1) BIP10112I: The resources from 'mqsicdc.par' have not been loaded because the runtime component 'ChangeDataCapture' has not been enabled. Reason: 'Restricted by Java Runtime selected'. Further detail: 'C:\Program Files\IBM\ACE\12.0.12.0\common\jdk\jre\embedded.java.yaml'. 
+2024-09-06 16:55:58.442980Z: [Thread 10504] (Msg 1/1) BIP10112I: The resources from 'imbopentelemetry.lil' have not been loaded because the runtime component 'OpenTelemetry' has not been enabled. Reason: 'Integration Server Configuration'. Further detail: 'server.conf.yaml'. 
+2024-09-06 16:56:03.588022Z: [Thread 10504] (Msg 1/1) BIP9906I: Reading deployed resources. 
+2024-09-06 16:56:03.735546Z: [Thread 10504] (Msg 1/1) BIP9907I: Initializing deployed resources. 
+2024-09-06 16:56:03.769662Z: [Thread 10504] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'Event_log' of type 'Application'. 
+2024-09-06 16:56:04.324424Z: [Thread 10504] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'Event_log' of type 'Application'. 
+2024-09-06 16:56:04.388606Z: [Thread 10504] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-06 16:56:04.388723Z: [Thread 10504] (Msg 1/1) BIP1996I: Listening on HTTP URL '/eventlog'. 
+2024-09-06 16:56:04.389068Z: [Thread 10504] (Msg 1/1) BIP2269I: Deployed resource 'MF_Event_log' (uuid='MF_Event_log',type='MessageFlow') started successfully. 
+2024-09-06 16:56:04.389242Z: [Thread 10504] (Msg 1/1) BIP9332I: Application 'Event_log' has been reloaded successfully. 
+2024-09-06 16:56:05.581195Z: [Thread 6364] (Msg 1/1) BIP2866I: IBM App Connect Enterprise administration security is inactive. 
+2024-09-06 16:56:05.629422Z: [Thread 6364] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7600' for 'RestAdmin http' connections. 
+2024-09-06 16:56:05.633061Z: [Thread 10504] (Msg 1/1) BIP1991I: Integration server has finished initialization. 
+2024-09-06 16:56:25.640712Z: [Thread 6916] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 16:56:25.641604Z: [Thread 6916] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-06 16:56:25.659272Z: [Thread 6916] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'Event_log' of type 'Application'. 
+2024-09-06 16:56:30.299608Z: [Thread 6916] (Msg 1/1) BIP2271I: Deployed resource 'MF_Event_log' (uuid='MF_Event_log',type='MessageFlow') successfully stopped. 
+2024-09-06 16:56:30.299990Z: [Thread 6916] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'Event_log' of type 'Application'. 
+2024-09-06 16:56:30.311504Z: [Thread 6916] (Msg 1/1) BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-06 16:56:30.398044Z: [Thread 6916] (Msg 1/1) BIP9521I: Application 'Event_log' has been deleted. 
+2024-09-06 16:56:30.424616Z: [Thread 6916] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 16:57:00.125370Z: [Thread 6916] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 16:57:00.346530Z: [Thread 6916] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'HTTP_OVERRIDE_CONSUMER' of type 'Application'. 
+2024-09-06 16:57:00.422411Z: [Thread 6916] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'HTTP_OVERRIDE_CONSUMER' of type 'Application'. 
+2024-09-06 16:57:00.433166Z: [Thread 6916] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-06 16:57:00.433275Z: [Thread 6916] (Msg 1/1) BIP1996I: Listening on HTTP URL '/path'. 
+2024-09-06 16:57:00.433590Z: [Thread 6916] (Msg 1/1) BIP2269I: Deployed resource 'MF_OVERRIDE_CONSUMER' (uuid='MF_OVERRIDE_CONSUMER',type='MessageFlow') started successfully. 
+2024-09-06 16:57:00.433719Z: [Thread 6916] (Msg 1/1) BIP9332I: Application 'HTTP_OVERRIDE_CONSUMER' has been created successfully. 
+2024-09-06 16:57:00.433964Z: [Thread 6916] (Msg 1/1) BIP9326I: The source 'HTTP_OVERRIDE_CONSUMERproject.generated.bar' has been successfully deployed. 
+2024-09-06 16:57:00.434542Z: [Thread 6916] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 16:58:05.305597Z: [Thread 6744] (Msg 1/5) BIP3120E: Exception condition detected on input node 'MF_OVERRIDE_CONSUMER.HTTP Input'. 
+2024-09-06 16:58:05.305980Z: [Thread 6744] (Msg 2/5) BIP2230E: Error detected whilst processing a message in node 'MF_OVERRIDE_CONSUMER.HTTP Request'. 
+2024-09-06 16:58:05.306110Z: [Thread 6744] (Msg 3/5) BIP3162E: An HTTP error occurred. The HTTP Request-Line was: 'POST /path3 HTTP/1.1
+'. 
+2024-09-06 16:58:05.306189Z: [Thread 6744] (Msg 4/5) BIP3152E: Socket error detected whilst invoking Web service located at host localhost, port 7800, path /path3. 
+2024-09-06 16:58:05.306350Z: [Thread 6744] (Msg 5/5) BIP3150E: A socket error occurred. Operation: ::connect::select(). Error Code: 10061. Error Text: No connection could be made because the target machine actively refused it.
+. 
+2024-09-06 16:58:20.698858Z: [Thread 6744] (Msg 1/5) BIP3120E: Exception condition detected on input node 'MF_OVERRIDE_CONSUMER.HTTP Input'. 
+2024-09-06 16:58:20.699012Z: [Thread 6744] (Msg 2/5) BIP2230E: Error detected whilst processing a message in node 'MF_OVERRIDE_CONSUMER.HTTP Request'. 
+2024-09-06 16:58:20.699132Z: [Thread 6744] (Msg 3/5) BIP3162E: An HTTP error occurred. The HTTP Request-Line was: 'POST /path3 HTTP/1.1
+'. 
+2024-09-06 16:58:20.699208Z: [Thread 6744] (Msg 4/5) BIP3152E: Socket error detected whilst invoking Web service located at host localhost, port 7800, path /path3. 
+2024-09-06 16:58:20.699282Z: [Thread 6744] (Msg 5/5) BIP3150E: A socket error occurred. Operation: ::connect::select(). Error Code: 10061. Error Text: No connection could be made because the target machine actively refused it.
+. 
+2024-09-06 16:59:28.645034Z: [Thread 10516] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 16:59:28.645154Z: [Thread 10516] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-06 16:59:28.646196Z: [Thread 10516] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'HTTP_OVERRIDE_CONSUMER' of type 'Application'. 
+2024-09-06 16:59:29.285806Z: [Thread 10516] (Msg 1/1) BIP2271I: Deployed resource 'MF_OVERRIDE_CONSUMER' (uuid='MF_OVERRIDE_CONSUMER',type='MessageFlow') successfully stopped. 
+2024-09-06 16:59:29.286168Z: [Thread 10516] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'HTTP_OVERRIDE_CONSUMER' of type 'Application'. 
+2024-09-06 16:59:29.294026Z: [Thread 10516] (Msg 1/1) BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-06 16:59:29.326802Z: [Thread 10516] (Msg 1/1) BIP9521I: Application 'HTTP_OVERRIDE_CONSUMER' has been deleted. 
+2024-09-06 16:59:29.328930Z: [Thread 10516] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 17:01:08.120787Z: [Thread 8988] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 17:01:08.198865Z: [Thread 8988] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'HTTP_CONSUMER' of type 'Application'. 
+2024-09-06 17:01:08.276032Z: [Thread 8988] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'HTTP_CONSUMER' of type 'Application'. 
+2024-09-06 17:01:08.290058Z: [Thread 8988] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-06 17:01:08.290164Z: [Thread 8988] (Msg 1/1) BIP1996I: Listening on HTTP URL '/consumer'. 
+2024-09-06 17:01:08.290485Z: [Thread 8988] (Msg 1/1) BIP2269I: Deployed resource 'MF_HTTP_CONSUMER' (uuid='MF_HTTP_CONSUMER',type='MessageFlow') started successfully. 
+2024-09-06 17:01:08.290614Z: [Thread 8988] (Msg 1/1) BIP9332I: Application 'HTTP_CONSUMER' has been created successfully. 
+2024-09-06 17:01:08.290740Z: [Thread 8988] (Msg 1/1) BIP9326I: The source 'HTTP_CONSUMERproject.generated.bar' has been successfully deployed. 
+2024-09-06 17:01:08.291425Z: [Thread 8988] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 17:02:42.938756Z: [Thread 5824] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 17:02:42.938876Z: [Thread 5824] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-06 17:02:42.940056Z: [Thread 5824] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'HTTP_CONSUMER' of type 'Application'. 
+2024-09-06 17:02:44.040576Z: [Thread 5824] (Msg 1/1) BIP2271I: Deployed resource 'MF_HTTP_CONSUMER' (uuid='MF_HTTP_CONSUMER',type='MessageFlow') successfully stopped. 
+2024-09-06 17:02:44.040880Z: [Thread 5824] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'HTTP_CONSUMER' of type 'Application'. 
+2024-09-06 17:02:44.046140Z: [Thread 5824] (Msg 1/1) BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-06 17:02:44.085404Z: [Thread 5824] (Msg 1/1) BIP9521I: Application 'HTTP_CONSUMER' has been deleted. 
+2024-09-06 17:02:44.087296Z: [Thread 5824] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 17:03:05.892591Z: [Thread 10680] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 17:03:06.004380Z: [Thread 10680] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:03:06.086105Z: [Thread 10680] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:03:06.097308Z: [Thread 10680] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-06 17:03:06.097430Z: [Thread 10680] (Msg 1/1) BIP1996I: Listening on HTTP URL '/provider'. 
+2024-09-06 17:03:06.097798Z: [Thread 10680] (Msg 1/1) BIP2269I: Deployed resource 'MF_HTTP_PROVIDER' (uuid='MF_HTTP_PROVIDER',type='MessageFlow') started successfully. 
+2024-09-06 17:03:06.097928Z: [Thread 10680] (Msg 1/1) BIP9332I: Application 'HTTP_PROVIDER' has been created successfully. 
+2024-09-06 17:03:06.098046Z: [Thread 10680] (Msg 1/1) BIP9326I: The source 'HTTP_PROVIDERproject.generated.bar' has been successfully deployed. 
+2024-09-06 17:03:06.098603Z: [Thread 10680] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 17:08:27.167378Z: [Thread 5824] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 17:08:27.167500Z: [Thread 5824] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-06 17:08:27.168626Z: [Thread 5824] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:08:30.460724Z: [Thread 5824] (Msg 1/1) BIP2271I: Deployed resource 'MF_HTTP_PROVIDER' (uuid='MF_HTTP_PROVIDER',type='MessageFlow') successfully stopped. 
+2024-09-06 17:08:30.461326Z: [Thread 5824] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:08:30.473328Z: [Thread 5824] (Msg 1/1) BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-06 17:08:30.501020Z: [Thread 5824] (Msg 1/1) BIP9521I: Application 'HTTP_PROVIDER' has been deleted. 
+2024-09-06 17:08:30.503362Z: [Thread 5824] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 17:08:41.315844Z: [Thread 6444] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 17:08:41.401308Z: [Thread 6444] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:08:41.482000Z: [Thread 6444] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:08:41.495384Z: [Thread 6444] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-06 17:08:41.495512Z: [Thread 6444] (Msg 1/1) BIP1996I: Listening on HTTP URL '/provider'. 
+2024-09-06 17:08:41.495872Z: [Thread 6444] (Msg 1/1) BIP2269I: Deployed resource 'MF_HTTP_PROVIDER' (uuid='MF_HTTP_PROVIDER',type='MessageFlow') started successfully. 
+2024-09-06 17:08:41.496012Z: [Thread 6444] (Msg 1/1) BIP9332I: Application 'HTTP_PROVIDER' has been created successfully. 
+2024-09-06 17:08:41.496132Z: [Thread 6444] (Msg 1/1) BIP9326I: The source 'HTTP_PROVIDERproject.generated.bar' has been successfully deployed. 
+2024-09-06 17:08:41.496872Z: [Thread 6444] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 17:11:00.594719Z: [Thread 8988] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 17:11:00.685071Z: [Thread 8988] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:11:02.467124Z: [Thread 8988] (Msg 1/1) BIP2271I: Deployed resource 'MF_HTTP_PROVIDER' (uuid='MF_HTTP_PROVIDER',type='MessageFlow') successfully stopped. 
+2024-09-06 17:11:02.467640Z: [Thread 8988] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:11:02.484251Z: [Thread 8988] (Msg 1/1) BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-06 17:11:02.535181Z: [Thread 8988] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:11:02.604923Z: [Thread 8988] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:11:02.615935Z: [Thread 8988] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-06 17:11:02.616085Z: [Thread 8988] (Msg 1/1) BIP1996I: Listening on HTTP URL '/provider'. 
+2024-09-06 17:11:02.616427Z: [Thread 8988] (Msg 1/1) BIP2269I: Deployed resource 'MF_HTTP_PROVIDER' (uuid='MF_HTTP_PROVIDER',type='MessageFlow') started successfully. 
+2024-09-06 17:11:02.616559Z: [Thread 8988] (Msg 1/1) BIP9332I: Application 'HTTP_PROVIDER' has been changed successfully. 
+2024-09-06 17:11:02.616728Z: [Thread 8988] (Msg 1/1) BIP9326I: The source 'HTTP_PROVIDERproject.generated.bar' has been successfully deployed. 
+2024-09-06 17:11:02.617443Z: [Thread 8988] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 17:11:54.164156Z: [Thread 2008] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 17:11:54.164288Z: [Thread 2008] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-06 17:11:54.165516Z: [Thread 2008] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:11:57.125956Z: [Thread 2008] (Msg 1/1) BIP2271I: Deployed resource 'MF_HTTP_PROVIDER' (uuid='MF_HTTP_PROVIDER',type='MessageFlow') successfully stopped. 
+2024-09-06 17:11:57.126476Z: [Thread 2008] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:11:57.144612Z: [Thread 2008] (Msg 1/1) BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-06 17:11:57.175056Z: [Thread 2008] (Msg 1/1) BIP9521I: Application 'HTTP_PROVIDER' has been deleted. 
+2024-09-06 17:11:57.177096Z: [Thread 2008] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 17:12:49.273604Z: [Thread 2008] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 17:12:49.361304Z: [Thread 2008] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'HTTP_CONSUMER' of type 'Application'. 
+2024-09-06 17:12:49.440792Z: [Thread 2008] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'HTTP_CONSUMER' of type 'Application'. 
+2024-09-06 17:12:49.451080Z: [Thread 2008] (Msg 1/1) BIP3132I: The HTTP Listener has started listening on port '7801' for 'http' connections. 
+2024-09-06 17:12:49.451200Z: [Thread 2008] (Msg 1/1) BIP1996I: Listening on HTTP URL '/consumer'. 
+2024-09-06 17:12:49.451552Z: [Thread 2008] (Msg 1/1) BIP2269I: Deployed resource 'MF_HTTP_CONSUMER' (uuid='MF_HTTP_CONSUMER',type='MessageFlow') started successfully. 
+2024-09-06 17:12:49.451784Z: [Thread 2008] (Msg 1/1) BIP9332I: Application 'HTTP_CONSUMER' has been created successfully. 
+2024-09-06 17:12:49.451896Z: [Thread 2008] (Msg 1/1) BIP9326I: The source 'HTTP_CONSUMERproject.generated.bar' has been successfully deployed. 
+2024-09-06 17:12:49.452392Z: [Thread 2008] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 17:14:29.654934Z: [Thread 10260] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 17:14:29.735258Z: [Thread 10260] (Msg 1/1) BIP2155I: About to 'Initialize' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:14:29.812546Z: [Thread 10260] (Msg 1/1) BIP2155I: About to 'Start' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:14:29.813302Z: [Thread 10260] (Msg 1/1) BIP1996I: Listening on HTTP URL '/provider'. 
+2024-09-06 17:14:29.813534Z: [Thread 10260] (Msg 1/1) BIP2269I: Deployed resource 'MF_HTTP_PROVIDER' (uuid='MF_HTTP_PROVIDER',type='MessageFlow') started successfully. 
+2024-09-06 17:14:29.813690Z: [Thread 10260] (Msg 1/1) BIP9332I: Application 'HTTP_PROVIDER' has been created successfully. 
+2024-09-06 17:14:29.813836Z: [Thread 10260] (Msg 1/1) BIP9326I: The source 'HTTP_PROVIDERproject.generated.bar' has been successfully deployed. 
+2024-09-06 17:14:29.814470Z: [Thread 10260] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 
+2024-09-06 17:17:03.393513Z: [Thread 10516] (Msg 1/1) BIP2152I: Configuration message received. 
+2024-09-06 17:17:03.393642Z: [Thread 10516] (Msg 1/1) BIP2153I: About to 'deleteAll' an integration server. 
+2024-09-06 17:17:03.396206Z: [Thread 10516] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'HTTP_CONSUMER' of type 'Application'. 
+2024-09-06 17:17:06.189718Z: [Thread 10516] (Msg 1/1) BIP2271I: Deployed resource 'MF_HTTP_CONSUMER' (uuid='MF_HTTP_CONSUMER',type='MessageFlow') successfully stopped. 
+2024-09-06 17:17:06.190314Z: [Thread 10516] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'HTTP_CONSUMER' of type 'Application'. 
+2024-09-06 17:17:06.228419Z: [Thread 10516] (Msg 1/1) BIP2155I: About to 'Stop' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:17:06.235409Z: [Thread 10516] (Msg 1/1) BIP2271I: Deployed resource 'MF_HTTP_PROVIDER' (uuid='MF_HTTP_PROVIDER',type='MessageFlow') successfully stopped. 
+2024-09-06 17:17:06.235559Z: [Thread 10516] (Msg 1/1) BIP2155I: About to 'TearDown' the deployed resource 'HTTP_PROVIDER' of type 'Application'. 
+2024-09-06 17:17:06.250206Z: [Thread 10516] (Msg 1/1) BIP3133I: The HTTP Listener has stopped listening on port '7801' for 'http' connections. 
+2024-09-06 17:17:06.276000Z: [Thread 10516] (Msg 1/1) BIP9521I: Application 'HTTP_CONSUMER' has been deleted. 
+2024-09-06 17:17:06.283517Z: [Thread 10516] (Msg 1/1) BIP9521I: Application 'HTTP_PROVIDER' has been deleted. 
+2024-09-06 17:17:06.285476Z: [Thread 10516] (Msg 1/1) BIP2154I: Integration server finished with Configuration message. 

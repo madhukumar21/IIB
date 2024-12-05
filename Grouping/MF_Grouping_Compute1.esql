@@ -1,0 +1,35 @@
+
+
+CREATE COMPUTE MODULE MF_Grouping_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		 CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		--SET OutputRoot = InputRoot;
+		DECLARE resRef REFERENCE TO InputRoot.ComIbmGroupCompleteNode.Group.Replies;
+		DECLARE AadharRef REFERENCE TO resRef.Aadhar.Reply.Root.JSON.Data.AadharDetails;
+		DECLARE PanRef REFERENCE TO resRef.pan.reply.Root.JSON.Data.PanDetails;
+		
+		IF AadharRef IS NOT NULL THEN
+			SET OutputRoot.XMLNSC.AadharDetails=AadharRef;
+		ELSEIF PanRef IS NOT NULL THEN
+			SET OutputRoot.XMLNSC.PanDetails=PanRef;	 
+		ELSE 
+			SET OutputRoot.XMLNSC.Message='Not Found';
+		END IF;
+	END;
+END MODULE;

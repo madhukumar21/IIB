@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><MessageAssembly iib:parser="GENERICROOT" xmlns:iib="http://com.ibm.iib/lt/1.0">
+    <version xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">1</version>
+    <checkpoint>
+        <messageId xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">00000C4C-66E87507-00000001</messageId>
+        <propagationCount xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">2</propagationCount>
+        <nodeCallDepth xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="INTEGER">3</nodeCallDepth>
+        <timestamp xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="TIMESTAMP">2024-09-16 18:12:23.379999</timestamp>
+        <source>
+            <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Mapping - Backend1</name>
+            <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">AggregationHTTPAsync#FCMComposite_1_12</identifier>
+            <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmMSLMappingNode</type>
+            <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">out</terminal>
+            <nodePath>
+                <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">AggregationHTTPAsync</application>
+                <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">AggregationHTTPAsync</messageFlow>
+                <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">Mapping - Backend1</node>
+            </nodePath>
+            <inputNode xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="BOOLEAN">FALSE</inputNode>
+        </source>
+        <target>
+            <name xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">HTTPAsyncRequest - BACKEND1</name>
+            <identifier xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">AggregationHTTPAsync#FCMComposite_1_10</identifier>
+            <type xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">ComIbmHTTPAsyncRequestNode</type>
+            <terminal xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">in</terminal>
+            <nodePath>
+                <application xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">AggregationHTTPAsync</application>
+                <messageFlow xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">AggregationHTTPAsync</messageFlow>
+                <node xmlns:iib="http://com.ibm.iib/lt/1.0" iib:valueType="CHARACTER">HTTPAsyncRequest - BACKEND1</node>
+            </nodePath>
+        </target>
+    </checkpoint>
+    <environment/>
+    <localEnvironment xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="MQROOT">
+        <Destination>
+            <HTTP>
+                <RequestIdentifier iib:valueType="BLOB">455648540000000000000000d42409fc6021000000000000</RequestIdentifier>
+            </HTTP>
+        </Destination>
+        <ComIbmAggregateControlNode>
+            <aggregateName iib:valueType="CHARACTER">AggregationHTTPAsync</aggregateName>
+            <aggregateId iib:valueType="CHARACTER">13713e7cc4154f099a9e535616f66d7b0000000000000000</aggregateId>
+        </ComIbmAggregateControlNode>
+    </localEnvironment>
+    <exceptionList/>
+    <message xmlns:iib="http://com.ibm.iib/lt/1.0" iib:parser="WSRoot">
+        <Properties iib:parser="MQPROPERTYPARSER">
+            <MessageSet iib:valueType="CHARACTER">{AggregationHTTPAsyncLib}</MessageSet>
+            <MessageType iib:valueType="CHARACTER">{}:CSV</MessageType>
+            <MessageFormat iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <Encoding iib:valueType="INTEGER">546</Encoding>
+            <CodedCharSetId iib:valueType="INTEGER">1208</CodedCharSetId>
+            <Transactional iib:valueType="BOOLEAN">FALSE</Transactional>
+            <Persistence iib:valueType="BOOLEAN">FALSE</Persistence>
+            <CreationTime iib:valueType="GMTTIMESTAMP">2024-09-16 18:12:23.379999</CreationTime>
+            <ExpirationTime iib:valueType="INTEGER">-1</ExpirationTime>
+            <Priority iib:valueType="INTEGER">0</Priority>
+            <ReplyIdentifier iib:valueType="BLOB">000000000000000000000000000000000000000000000000</ReplyIdentifier>
+            <ReplyProtocol iib:valueType="CHARACTER">SOAP-HTTP</ReplyProtocol>
+            <Topic iib:elementType="0x03000000"/>
+            <ContentType iib:valueType="CHARACTER">application/xml; charset=utf-8</ContentType>
+            <IdentitySourceType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentitySourceToken iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentitySourcePassword iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentitySourceIssuedBy iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentityMappedType iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentityMappedToken iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentityMappedPassword iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+            <IdentityMappedIssuedBy iib:elementType="0x03000000" iib:valueType="CHARACTER"/>
+        </Properties>
+        <HTTPInputHeader iib:parser="WSINPHDR">
+            <Content-Type iib:valueType="CHARACTER">application/xml; charset=utf-8</Content-Type>
+            <Cache-Control iib:valueType="CHARACTER">no-cache</Cache-Control>
+            <Pragma iib:valueType="CHARACTER">no-cache</Pragma>
+            <User-Agent iib:valueType="CHARACTER">Java/11.0.22</User-Agent>
+            <Host iib:valueType="CHARACTER">localhost:7800</Host>
+            <Accept iib:valueType="CHARACTER">text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2</Accept>
+            <Connection iib:valueType="CHARACTER">keep-alive</Connection>
+            <Content-Length iib:valueType="CHARACTER">209</Content-Length>
+            <X-Original-HTTP-Command iib:valueType="CHARACTER">POST http://localhost:7800/AggregationHTTPAsync HTTP/1.1</X-Original-HTTP-Command>
+            <X-Server-Name iib:valueType="CHARACTER">localhost</X-Server-Name>
+            <X-Server-Port iib:valueType="CHARACTER">7800</X-Server-Port>
+            <X-Remote-Addr iib:valueType="CHARACTER">127.0.0.1</X-Remote-Addr>
+            <X-Remote-Host iib:valueType="CHARACTER">localhost</X-Remote-Host>
+            <X-Scheme iib:valueType="CHARACTER">http</X-Scheme>
+        </HTTPInputHeader>
+        <DFDL iib:parser="dfdl">
+            <CSV>
+                <record>
+                    <field1 iib:valueType="CHARACTER">hello</field1>
+                    <field2 iib:valueType="CHARACTER">world</field2>
+                    <field3 iib:valueType="CHARACTER">backend1</field3>
+                </record>
+            </CSV>
+        </DFDL>
+    </message>
+</MessageAssembly>

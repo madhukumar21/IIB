@@ -1,0 +1,31 @@
+
+
+CREATE COMPUTE MODULE MF_Grouping_backend2_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		 CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		--SET OutputRoot = InputRoot;
+		DECLARE inRef REFERENCE TO InputRoot.JSON.Data.PanNo;
+		IF inRef=321 THEN
+			SET OutputRoot.JSON.Data.PanDetails.Name='madhu';
+			SET OutputRoot.JSON.Data.PanDetails.Address='korutla';
+			SET OutputRoot.JSON.Data.PanDetails.Age=21;
+		END IF;
+	
+	END;
+END MODULE;
