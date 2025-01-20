@@ -1,9 +1,8 @@
 
 
-CREATE COMPUTE MODULE MF_TC_Compute1
+CREATE COMPUTE MODULE TimerControl_only_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
-		
 		-- CALL CopyMessageHeaders();
 		 CALL CopyEntireMessage();
 		RETURN TRUE;
@@ -22,9 +21,9 @@ CREATE COMPUTE MODULE MF_TC_Compute1
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		SET OutputRoot = InputRoot;
 		SET OutputLocalEnvironment.TimeoutRequest.Action='SET';
-		SET OutputLocalEnvironment.TimeoutRequest.Identifier='uid';
+		SET OutputLocalEnvironment.TimeoutRequest.Identifier='uq';
 		SET OutputLocalEnvironment.TimeoutRequest.StartDate='TODAY';
-		SET OutputLocalEnvironment.TimeoutRequest.StartTime='02:09:00';
+		SET OutputLocalEnvironment.TimeoutRequest.StartTime='14:40:00';
 		SET OutputLocalEnvironment.TimeoutRequest.Interval=20;
 		SET OutputLocalEnvironment.TimeoutRequest.Count=5;
 		SET OutputLocalEnvironment.TimeoutRequest.IgnoreMissed=TRUE;
@@ -32,4 +31,3 @@ CREATE COMPUTE MODULE MF_TC_Compute1
 		
 	END;
 END MODULE;
-

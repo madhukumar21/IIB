@@ -21,5 +21,6 @@ CREATE COMPUTE MODULE MF_Satic_Library_Compute
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		SET OutputRoot.JSON.Data = InputRoot.XMLNSC;
+		
 	END;
 END MODULE;

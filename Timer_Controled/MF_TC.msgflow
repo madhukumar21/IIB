@@ -7,25 +7,25 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Timer_Controled/icons/full/obj16/MF_TC.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Timer_Controled/icons/full/obj30/MF_TC.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmTimeoutNotification.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="75,187" uniqueIdentifier="uid" operationMode="controlled">
+      <nodes xmi:type="ComIbmTimeoutNotification.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="130,177" uniqueIdentifier="uid" operationMode="controlled">
         <translation xmi:type="utility:ConstantString" string="Timeout Notification"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="298,204" outputDirectory="C:\Users\Sreenivas Bandaru\Desktop\yash\IN" outputFilename="TimrControl" outputMode="append">
+      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="338,179" outputDirectory="C:\Users\Sreenivas Bandaru\Documents\Files\Timer\out" outputFilename="TimrControl" outputMode="append">
         <translation xmi:type="utility:ConstantString" string="File Output"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="464,73" transaction="commit" computeExpression="esql://routine/#MF_TC_Compute1.Main" computeMode="all">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="519,63" transaction="commit" computeExpression="esql://routine/#MF_TC_Compute1.Main" computeMode="all">
         <translation xmi:type="utility:ConstantString" string="Compute1"/>
       </nodes>
-      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_13" location="50,74" queueName="InputQ" destinationQueueManagerName="QMGR" messageDomainProperty="XMLNSC">
+      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_13" location="110,80" queueName="Input" destinationQueueManagerName="QMGR" messageDomainProperty="XMLNSC" transactionMode="no">
         <translation xmi:type="utility:ConstantString" string="MQ Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmTimeoutControl.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_14" location="627,74" uniqueIdentifier="uid" messageDomain="XMLNSC">
+      <nodes xmi:type="ComIbmTimeoutControl.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_14" location="682,64" uniqueIdentifier="uid" messageDomain="XMLNSC">
         <translation xmi:type="utility:ConstantString" string="Timeout Control"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_15" location="167,86" computeExpression="esql://routine/#MF_TC_Compute.Main" computeMode="all">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_15" location="222,76" computeExpression="esql://routine/#MF_TC_Compute.Main" computeMode="all">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
-      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_16" location="323,98" queueName="OutputQ" destinationQueueManagerName="QMGR">
+      <nodes xmi:type="ComIbmMQOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_16" location="378,88" queueName="OutputQ" destinationQueueManagerName="QMGR">
         <translation xmi:type="utility:ConstantString" string="MQ Output"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_6" targetNode="FCMComposite_1_9" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>

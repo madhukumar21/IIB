@@ -19,6 +19,7 @@ CREATE COMPUTE MODULE MF_File_Fixed_Length_Compute
 	END;
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
-		SET OutputRoot = InputRoot;
+		--SET Environment.Destination.File.Directory='C:\Users\Sreenivas Bandaru\Documents\Files\Fixed_length\out';
+		set OutputRoot=InputRoot;
 	END;
 END MODULE;

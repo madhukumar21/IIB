@@ -1,6 +1,6 @@
 
 
-CREATE COMPUTE MODULE MF_TC_Compute
+CREATE COMPUTE MODULE TimerControl_only_Compute1
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
 		-- CALL CopyMessageHeaders();
@@ -22,5 +22,3 @@ CREATE COMPUTE MODULE MF_TC_Compute
 		SET OutputRoot = InputRoot;
 	END;
 END MODULE;
-
-

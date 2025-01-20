@@ -6,13 +6,13 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/File_Fixed_Length/icons/full/obj16/MF_File_Fixed_Length.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/File_Fixed_Length/icons/full/obj30/MF_File_Fixed_Length.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="22,132" inputDirectory="C:\Users\Sreenivas Bandaru\Documents\Files\Fixed_length\in" messageDomainProperty="BLOB" recordDetection="fixedLength" recordLength="3">
+      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="37,85" inputDirectory="C:\Users\Sreenivas Bandaru\Documents\Files\Fixed_length\in" messageDomainProperty="BLOB" recordDetection="fixedLength" recordLength="3">
         <translation xmi:type="utility:ConstantString" string="File Input"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="479,134" outputDirectory="C:\Users\Sreenivas Bandaru\Documents\Files\Fixed_length\out" outputFilename="Filed_length">
+      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="494,87" outputDirectory="C:\Users\Sreenivas Bandaru\Documents\Files\Fixed_length\out" outputFilename="Filed_length">
         <translation xmi:type="utility:ConstantString" string="File Output"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="256,80" computeExpression="esql://routine/#MF_File_Fixed_Length_Compute.Main">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="271,33" computeExpression="esql://routine/#MF_File_Fixed_Length_Compute.Main">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
