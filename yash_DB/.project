@@ -3,6 +3,7 @@
 	<name>yash_DB</name>
 	<comment></comment>
 	<projects>
+		<project>lib2</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

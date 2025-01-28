@@ -21,6 +21,7 @@ CREATE COMPUTE MODULE mf_sub_Compute
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 	--SET OutputLocalEnvironment.Destination.MQ.DestinationData.queueName='Output';
-		SET OutputRoot.JSON.Data.Name = InputRoot.XMLNSC.Name;
+--		SET OutputRoot.JSON.Data.Name = InputRoot.XMLNSC.Name;
+		SET OutputRoot=InputRoot;
 	END;
 END MODULE;

@@ -6,18 +6,18 @@ CREATE COMPUTE MODULE MF_Compute
 		-- CALL CopyMessageHeaders();
 		-- CALL CopyEntireMessage();
 		
-		DECLARE CreateTableSQL CHARACTER;
-
-        -- Construct the SQL statement to create the table
-        SET CreateTableSQL = 'CREATE TABLE YASH (
-                             ID INT PRIMARY KEY,
-                             Name VARCHAR(100) NOT NULL,
-                             Department VARCHAR(50),
-                             HireDate DATE
-                             )';
-
-        -- Execute the SQL statement using the ODBC DSN
-        					PASSTHRU(CreateTableSQL);
+--		DECLARE CreateTableSQL CHARACTER;
+--
+--        -- Construct the SQL statement to create the table
+--        SET CreateTableSQL = 'CREATE TABLE YASH (
+--                             ID INT PRIMARY KEY,
+--                             Name VARCHAR(100) NOT NULL,
+--                             Department VARCHAR(50),
+--                             HireDate DATE
+--                             )';
+--
+--        -- Execute the SQL statement using the ODBC DSN
+--        					PASSTHRU(CreateTableSQL);
 		RETURN TRUE;
 	END;
 
