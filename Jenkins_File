@@ -1,54 +1,60 @@
 pipeline {
     agent any
-
+ 
+    parameters {
+        string(name: 'ACE_VERSION', defaultValue: '12.0.12.0', description: 'IBM ACE version')
+        string(name: 'NODE_NAME', defaultValue: 'test', description: 'IBM ACE Node name')
+        string(name: 'SERVER_NAME', defaultValue: 't1', description: 'IBM ACE Server name')
+    }
+ 
     environment {
-        ACE_WORKSPACE = 'C:\\Users\\Sreenivas Bandaru\\IBM\\ACET12\\workspace'
-        BAR_FILE_NAME = 'task1.bar'
-        APP_NAME = 'task1'
-        EXEC_GROUP_NAME = 'server'
-        INTEGRATION_NODE = 'b1'
-        ACE_BIN_PATH = 'C:\\Program Files\\IBM\\ACE\\12.0.12.0\\tools'
+        REPO_URL = 'https://github.com/madhukumar21/IIB.git'
+        BRANCH = 'master'
+        WORK_DIR = 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\IIB_job'
+        WORKSPACE_ROOT = "${env.WORKSPACE}"
+        BAR_OUTPUT_DIR = "${WORKSPACE_ROOT}\\bars"
+ 
+        ACE_HOME       = "C:\\Program Files\\IBM\\ACE\\${params.ACE_VERSION}"
+        CREATEBAR_EXE  = "${ACE_HOME}\\tools\\mqsicreatebar.exe"
+        DEPLOY_EXE     = "${ACE_HOME}\\server\\bin\\mqsideploy.exe"
+        MQSIPROFILE    = "${ACE_HOME}\\server\\bin\\mqsiprofile.cmd"
+        OSSL_MODULES   = "${ACE_HOME}\\server\\lib\\ossl-modules"
     }
-
+ 
     stages {
-        stage('Clone Git Repo') {
+        stage('Clone Repository') {
             steps {
-                git credentialsId: 'madhu', url: 'https://github.com/madhukumar21/IIB.git', branch: 'master'
+                echo "Cloning the repository from ${REPO_URL}..."
+                git branch: "${BRANCH}", url: "${REPO_URL}"
             }
         }
-
-        stage('Build BAR File') {
+ 
+        stage('Create BAR File') {
             steps {
                 bat """
-                mkdir "%ACE_WORKSPACE%"
-                "%ACE_BIN_PATH%\\mqsicreatebar.exe" -data "%ACE_WORKSPACE%" ^
-                    -b "%BAR_FILE_NAME%" ^
-                    -a "%APP_NAME%"
+                    CALL "${MQSIPROFILE}"
+                    "${CREATEBAR_EXE}" ^
+                      -data "${WORKSPACE_ROOT }" ^
+                      -b "${BAR_OUTPUT_DIR}\\TestJenkin.bar" ^
+                      -a "TestJenkin" ^
+                      -p "TestJenkin"
                 """
             }
         }
-
-        stage('Deploy BAR to Integration Server') {
+ 
+        stage('Deploy BAR File') {
             steps {
                 bat """
-                call "C:\\Program Files\\IBM\\ACE\\12.0.12.0\\server\\bin\\mqsiprofile.cmd" ^
-        
-               
-                mqsideploy.exe %INTEGRATION_NODE% ^
-                    -e %EXEC_GROUP_NAME% ^
-                    -a "%ACE_WORKSPACE%\\%BAR_FILE_NAME%" ^
-                    -w 300
+                    CALL "${MQSIPROFILE}"
+ 
+                    "${DEPLOY_EXE}" ^
+                  "${params.NODE_NAME}" ^
+                    -e "${params.SERVER_NAME}" ^
+                  -a "${BAR_OUTPUT_DIR}\\TestJenkin.bar"
+ 
+                
                 """
             }
-        }
-    }
-
-    post {
-        success {
-            echo "✅ BAR file deployed successfully."
-        }
-        failure {
-            echo "❌ Deployment failed."
         }
     }
 }
