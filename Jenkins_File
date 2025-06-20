@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+
+    environment {
+        ACE_WORKSPACE = 'C:\\Users\\Sreenivas Bandaru\\IBM\\ACET12\\workspace'
+        BAR_FILE_NAME = 'task1.bar'
+        APP_NAME = 'task1'
+        EXEC_GROUP_NAME = 'server'
+        INTEGRATION_NODE = 'b1'
+        ACE_BIN_PATH = 'C:\\Program Files\\IBM\\ACE\\12.0.12.0\\tools'
+    }
+
+    stages {
+        stage('Clone Git Repo') {
+            steps {
+                git credentialsId: 'madhu', url: 'https://github.com/madhukumar21/IIB.git', branch: 'master'
+            }
+        }
+
+        stage('Build BAR File') {
+            steps {
+                bat """
+                mkdir "%ACE_WORKSPACE%"
+                "%ACE_BIN_PATH%\\mqsicreatebar.exe" -data "%ACE_WORKSPACE%" ^
+                    -b "%BAR_FILE_NAME%" ^
+                    -a "%APP_NAME%"
+                """
+            }
+        }
+
+        stage('Deploy BAR to Integration Server') {
+            steps {
+                bat """
+                call "C:\\Program Files\\IBM\\ACE\\12.0.12.0\\server\\bin\\mqsiprofile.cmd" ^
+        
+               
+                mqsideploy.exe %INTEGRATION_NODE% ^
+                    -e %EXEC_GROUP_NAME% ^
+                    -a "%ACE_WORKSPACE%\\%BAR_FILE_NAME%" ^
+                    -w 300
+                """
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "✅ BAR file deployed successfully."
+        }
+        failure {
+            echo "❌ Deployment failed."
+        }
+    }
+}
