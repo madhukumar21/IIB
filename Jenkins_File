@@ -3,8 +3,8 @@ pipeline {
  
     parameters {
         string(name: 'ACE_VERSION', defaultValue: '12.0.12.0', description: 'IBM ACE version')
-        string(name: 'NODE_NAME', defaultValue: 'test', description: 'IBM ACE Node name')
-        string(name: 'SERVER_NAME', defaultValue: 't1', description: 'IBM ACE Server name')
+        string(name: 'NODE_NAME', defaultValue: 'b1', description: 'IBM ACE Node name')
+        string(name: 'SERVER_NAME', defaultValue: 'server', description: 'IBM ACE Server name')
     }
  
     environment {
