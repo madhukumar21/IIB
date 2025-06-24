@@ -9,5 +9,5 @@ CREATE COMPUTE MODULE mf_Compute
 
 	CREATE PROCEDURE CopyEntireMessage() BEGIN
 		SET OutputRoot.JSON.Data = InputRoot.XMLNSC;
-	END;
+	END;                         
 END MODULE;
