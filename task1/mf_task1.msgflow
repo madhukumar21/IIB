@@ -5,7 +5,7 @@
     <translation xmi:type="utility:TranslatableString" key="mf_task1" bundleName="mf_task1" pluginId="task1"/>
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/task1/icons/full/obj16/mf_task1.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/task1/icons/full/obj30/mf_task1.gif"/>
-    <composition>
+    <composition> 
       <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="203,123" URLSpecifier="/path">
         <translation xmi:type="utility:ConstantString" string="HTTP Input"/>
       </nodes>
